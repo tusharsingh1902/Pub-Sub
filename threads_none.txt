@@ -1,0 +1,94 @@
+thread count sweep, 8 partitions
+date: Sat Aug 15 11:58:57 IST 2026
+sync policy: none (100)
+total messages per run: 800000, payload: 100B
+
+
+--- 1 threads x 800000 messages ---
+successful   800000
+errors       0
+elapsed      20.080 s
+throughput   39841 msgs/sec
+latency p50  0.025 ms
+latency p95  0.029 ms
+latency p99  0.033 ms
+latency p999 0.065 ms
+latency max  8.834 ms
+
+--- 2 threads x 400000 messages ---
+successful   800000
+errors       0
+elapsed      11.269 s
+throughput   70994 msgs/sec
+latency p50  0.027 ms
+latency p95  0.034 ms
+latency p99  0.042 ms
+latency p999 0.089 ms
+latency max  4.692 ms
+
+--- 4 threads x 200000 messages ---
+successful   800000
+errors       0
+elapsed      8.551 s
+throughput   93561 msgs/sec
+latency p50  0.039 ms
+latency p95  0.065 ms
+latency p99  0.084 ms
+latency p999 0.117 ms
+latency max  4.561 ms
+
+--- 8 threads x 100000 messages ---
+successful   800000
+errors       0
+elapsed      8.842 s
+throughput   90474 msgs/sec
+latency p50  0.082 ms
+latency p95  0.141 ms
+latency p99  0.175 ms
+latency p999 0.270 ms
+latency max  37.400 ms
+
+--- 16 threads x 50000 messages ---
+successful   800000
+errors       0
+elapsed      7.627 s
+throughput   104889 msgs/sec
+latency p50  0.148 ms
+latency p95  0.206 ms
+latency p99  0.244 ms
+latency p999 0.338 ms
+latency max  4.233 ms
+
+--- 32 threads x 25000 messages ---
+successful   800000
+errors       0
+elapsed      7.436 s
+throughput   107589 msgs/sec
+latency p50  0.292 ms
+latency p95  0.363 ms
+latency p99  0.423 ms
+latency p999 0.854 ms
+latency max  15.806 ms
+
+--- 64 threads x 12500 messages ---
+successful   800000
+errors       0
+elapsed      7.245 s
+throughput   110424 msgs/sec
+latency p50  0.571 ms
+latency p95  0.678 ms
+latency p99  0.873 ms
+latency p999 2.158 ms
+latency max  8.001 ms
+
+--- 128 threads x 6250 messages ---
+successful   800000
+errors       0
+elapsed      7.236 s
+throughput   110555 msgs/sec
+latency p50  1.129 ms
+latency p95  1.390 ms
+latency p99  2.531 ms
+latency p999 8.927 ms
+latency max  91.751 ms
+

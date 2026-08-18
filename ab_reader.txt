@@ -1,0 +1,27 @@
+buffered vs unbuffered read path
+date: Sat Aug 15 15:04:03 IST 2026
+8 threads x 100000 msgs, 8 partitions, 100B payload
+sync policy: everyn (100)
+
+--- ./broker_server_unbuffered ---
+successful   800000
+errors       0
+elapsed      107.289 s
+throughput   7456 msgs/sec
+latency p50  0.840 ms
+latency p95  2.968 ms
+latency p99  7.742 ms
+latency p999 14.748 ms
+latency max  23.872 ms
+
+--- ./broker_server ---
+successful   800000
+errors       0
+elapsed      35.920 s
+throughput   22272 msgs/sec
+latency p50  0.112 ms
+latency p95  0.179 ms
+latency p99  8.032 ms
+latency p999 15.414 ms
+latency max  53.583 ms
+

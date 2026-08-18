@@ -1,0 +1,77 @@
+pub-sub broker benchmark
+date: Sat Aug 15 12:00:48 IST 2026
+sync policy: everyn (100)
+threads: 8, messages/thread: 100000, payload: 100B
+
+=== throughput vs partition count ===
+
+--- 1 partitions ---
+warmup 10000 msgs/thread, then 800000 timed messages: 8 threads x 100000, payload 100 bytes
+
+--- results ---
+successful   800000
+errors       0
+elapsed      43.500 s
+throughput   18391 msgs/sec
+latency p50  0.134 ms
+latency p95  3.647 ms
+latency p99  4.256 ms
+latency p999 4.747 ms
+latency max  11.915 ms
+
+--- 2 partitions ---
+warmup 10000 msgs/thread, then 800000 timed messages: 8 threads x 100000, payload 100 bytes
+
+--- results ---
+successful   800000
+errors       0
+elapsed      39.880 s
+throughput   20060 msgs/sec
+latency p50  0.117 ms
+latency p95  3.135 ms
+latency p99  6.903 ms
+latency p999 8.280 ms
+latency max  20.181 ms
+
+--- 4 partitions ---
+warmup 10000 msgs/thread, then 800000 timed messages: 8 threads x 100000, payload 100 bytes
+
+--- results ---
+successful   800000
+errors       0
+elapsed      41.397 s
+throughput   19325 msgs/sec
+latency p50  0.141 ms
+latency p95  0.280 ms
+latency p99  8.061 ms
+latency p999 13.056 ms
+latency max  20.071 ms
+
+--- 8 partitions ---
+warmup 10000 msgs/thread, then 800000 timed messages: 8 threads x 100000, payload 100 bytes
+
+--- results ---
+successful   800000
+errors       0
+elapsed      33.458 s
+throughput   23910 msgs/sec
+latency p50  0.066 ms
+latency p95  0.224 ms
+latency p99  8.075 ms
+latency p999 15.395 ms
+latency max  31.562 ms
+
+--- 16 partitions ---
+warmup 10000 msgs/thread, then 800000 timed messages: 8 threads x 100000, payload 100 bytes
+
+--- results ---
+successful   800000
+errors       0
+elapsed      37.231 s
+throughput   21488 msgs/sec
+latency p50  0.071 ms
+latency p95  3.336 ms
+latency p99  5.771 ms
+latency p999 11.187 ms
+latency max  22.397 ms
+
